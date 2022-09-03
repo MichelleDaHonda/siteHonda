@@ -1,0 +1,529 @@
+body{
+    font-family: Roboto,sans-serif;
+    background: #fdfdfd;
+}
+
+#motos{
+    background-image:url("../img/rastro.jpg");
+    background-size: contain;
+    
+}
+
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('../img/loading.gif') 50% 50% no-repeat black;
+}
+
+#motos{
+    width: 100%;
+   
+}
+
+
+.slider{
+    margin: 0 auto;
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    border-radius: 15px 15px 15px 15px;
+   
+    border: 1px solid black;
+    
+    
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: all 0.9s;
+    
+   
+}
+
+.slide img{
+    width: 100%;
+    height: 500px;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.nav-manual{
+    position: absolute;
+    width: 400px;
+    margin-top: 50px;
+    margin-left: 200px;
+    display: flex;
+    
+    justify-content: center;
+    
+}
+
+.manual-btn{
+    border: 2px solid red;
+    padding: 5px;
+    border-radius: 15px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+
+.manual-btn:not(:Last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background: red;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+#motostitle{
+    text-align: center;
+    margin-top: 50px;
+    line-height: 50px;
+    background: #fafafa;
+    
+}
+
+.nav-auto{
+    position: absolute;
+    width : 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-auto div{
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    
+}
+
+
+.auto-btn{
+    margin-top: 90px;
+}
+
+.auto-btn:not(:Last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .nav-auto #btn1{
+    background-color: #fff;
+}
+
+#radio2:checked ~ .nav-auto #btn2{
+    background-color: #fff;
+}
+
+#radio3:checked ~ .nav-auto #btn3{
+    background-color: #fff;
+}
+
+#radio4:checked ~ .nav-auto #btn4{
+    background-color: #fff;
+}
+
+
+
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+    width: 90vw;
+    margin-left: 65px;
+    margin-top: 25px;
+    
+}
+
+.panel {
+  box-shadow: 0 5px 1rem rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.5s ease-in;
+}
+
+.panel h3 {
+  font-size: calc(24 / 18 * 1rem);
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+    opacity: 0;
+    background: black;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: all 0.5s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+
+h3{
+    color: red;
+    font-weight: 700;
+}
+
+#labelcb{
+    color: white;
+    text-decoration: none;
+    background: black;
+    padding: 8px 16px;
+    position: relative;
+    top: 5px;
+    border-radius: 25px 0px 0px 0px;
+    font-size: 14px;
+    cursor: pointer;
+    
+}
+
+#labelcb:hover{
+    background-color: red;
+}
+
+#cb{
+    display: none;
+}
+
+#cb-descri{
+    overflow: hidden;
+    height: 0px;
+    transition: 0.5s;
+    background: rgba(0,0,0,.9);
+    margin-top: 13px;
+    border-radius: 0px 0px 25px 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+
+#cb:checked ~ #cb-descri{
+    height: 436px;
+}
+#cb-descri p{
+    font-size: 14px;
+   
+}
+
+#cb1{
+    display: none;
+}
+
+#cb-descri1{
+    overflow: hidden;
+    height: 0px;
+    transition: 0.5s;
+    background: rgba(0,0,0,.9);
+    margin-top: 13px;
+    border-radius: 0px 0px 25px 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+
+#cb1:checked ~ #cb-descri1{
+    height: 436px;
+}
+#cb-descri1 p{
+    font-size: 14px;
+    
+}
+
+.veja a{
+    text-decoration: none;
+    padding: 18px 28px;
+    background: red;
+    color: black;
+    border-radius: 15px;
+    transition: all 0.2s;
+}
+
+.veja a:hover{
+    transition: 1s;
+    border: none;
+    text-transform: uppercase;
+    background: black;
+    color: red;
+    border: 1px solid red;
+    transform: translateY(-0.25em);
+    cursor: pointer;
+    transition: all 0.6s;
+}
+
+#cb2{
+    display: none;
+}
+
+#cb-descri2{
+    overflow: hidden;
+    height: 0px;
+    transition: 0.5s;
+    background: rgba(0,0,0,.9);
+    margin-top: 13px;
+    border-radius: 0px 0px 25px 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+
+#cb2:checked ~ #cb-descri2{
+    height: 436px;
+}
+#cb-descri2 p{
+    font-size: 14px;
+    
+}
+
+#cb3{
+    display: none;
+}
+
+#cb-descri3{
+    overflow: hidden;
+    height: 0px;
+    transition: 0.5s;
+    background: rgba(0,0,0,.9);
+    margin-top: 13px;
+    border-radius: 0px 0px 25px 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+
+#cb3:checked ~ #cb-descri3{
+    height: 436px;
+}
+#cb-descri3 p{
+    font-size: 14px;
+    
+}
+
+#cb4{
+    display: none;
+}
+
+#cb-descri4{
+    overflow: hidden;
+    height: 0px;
+    transition: 0.5s;
+    background: rgba(0,0,0,.9);
+    margin-top: 13px;
+    border-radius: 0px 0px 25px 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+
+#cb4:checked ~ #cb-descri4{
+    height: 436px;
+}
+#cb-descri4 p{
+    font-size: 14px;
+    
+}
+
+
+#cb5{
+    display: none;
+}
+
+#cb-descri5{
+    overflow: hidden;
+    height: 0px;
+    transition: 0.5s;
+    background: rgba(0,0,0,.9);
+    margin-top: 13px;
+    border-radius: 0px 0px 25px 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+
+#cb5:checked ~ #cb-descri5{
+    height: 436px;
+}
+#cb-descri5 p{
+    font-size: 14px;
+    
+}
+
+.main{
+    width: 100%
+    max-width: 2500px;
+    margin-bottom: 50px;
+}
+
+.main-title{
+    margin-left: 7%;
+    margin-top: 50px;
+    line-height: 1;
+    
+}
+
+.main-title h1{
+    font-size: 45px;
+    color: #3d3d3e;
+}
+
+.main-title h2{
+    font-size: 16px;
+    margin-left: 2px;
+    
+}
+
+#motos-mobile{
+    display: none;
+}
+
+
+
+@media (max-width: 1000px){
+    .container{
+	display: none;
+    }
+
+    #motos-mobile{
+	display: flex;
+	flex-flow: column wrap;
+    }
+
+    .main-title h1{
+    font-size: 70px;
+    color: #3d3d3e;
+}
+
+    .main-title h2{
+	font-size: 32px;
+	margin-left: 2px;
+	
+    }
+    
+}
+
+
+/*whats*/
+
+button{
+    color: #fff;
+    background: #2ebd5a;
+    font-size: 3rem !important;
+    border-radius: 100px;
+    width: 80px;
+    height: 80px;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    display: block;
+    right: 20px;
+    bottom: 20px;
+    position: fixed;
+}
+button:hover{
+    background: #1a833a;
+}
+
+#formulario{
+  display: none;
+  width: 350px;
+  background: #2ebd5a;
+  border-radius: 6px;
+  padding: 20px 20px;
+  bottom: 20px;
+  position: fixed;
+  right: 20px;
+}
+#formulario a{
+      color: #fff;
+    text-decoration: none;
+    background: #df4949;
+    font-size: 0.7rem;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -11px;
+    border-radius: 100px;
+    text-align: center;
+    padding: 5px 7px;
+    box-shadow: 0px 2px 3px #0006;
+}
+input, textarea{
+  color: #fff;
+     width: 100%;
+    padding: 10px;
+    float: left;
+    margin: 0px 0 0 -12px;
+    border: 2px solid #73ff9e;
+    border-radius: 3px;
+    background: transparent;
+    margin-bottom: 7px;
+}
+.enviar{
+      width: 107%;
+    background: #fff;
+    border: 0;
+    color: #2ebd5a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+::placeholder {
+    color: #fff;
+}
